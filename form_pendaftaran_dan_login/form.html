@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pendaftaran Aman! AJRUN KABIR 07023</title>
+    <script>
+        function validateForm() {
+            const username = document.forms["registerForm"]["username"].value;
+            const password = document.forms["registerForm"]["password"].value;
+            if (username === "" || password === "") {
+                alert("Username dan password tidak boleh kosong!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Form Pendaftaran</h2>
+    <form name="registerForm" action="proses_register.php" method="POST" onsubmit="return validateForm();">
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <input type="hidden" name="token" value="<?php session_start(); echo $_SESSION['token'] = bin2hex(random_bytes(32)); ?>">
+
+        <input type="submit" value="Daftar">
+    </form>
+    <br>
+    <a href="login.html">Sudah punya akun? Login di sini</a>
+</body>
+</html>
