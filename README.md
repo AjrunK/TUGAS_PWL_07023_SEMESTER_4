@@ -2,3 +2,5 @@
 AJRUN KABIR  A12.2023.07023
 
 Repository ini berisi kumpulan tugas mata kuliah **Pemrograman Web Lanjut (PWL)** untuk semester 4.
+
+(Untuk melihat readme pada UAS, masuk ke folder UAS)
